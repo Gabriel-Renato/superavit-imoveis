@@ -1,0 +1,120 @@
+
+Table cliente {
+  id integer [pk]
+  nome varchar
+  email varchar
+  telefone varchar
+  senha varchar
+  id_localizacao integer [ref: > localizacao.id]
+}
+
+Table loja {
+  id integer [pk]
+  nome varchar
+  email varchar
+  telefone varchar
+  senha varchar
+  id_localizacao integer [ref: > localizacao.id]
+  cnpj varchar
+}
+
+Table entregador {
+  id integer [pk]
+  nome varchar
+  email varchar
+  telefone varchar
+  senha varchar
+  id_veiculo integer [ref: > veiculo.id]
+  id_localizacao integer [ref: > localizacao.id]
+}
+
+Table localizacao {
+  id integer [pk]
+  estado varchar
+  cidade varchar
+  bairro varchar
+}
+
+Table veiculo {
+  id integer [pk]
+  tipo_transporte varchar
+  id_entregador integer [ref: > entregador.id]
+}
+
+Table produto {
+  id integer [pk]
+  nome varchar
+  valor decimal
+  peso decimal
+  id_tipo integer [ref: > tipo_produto.id]
+  id_loja integer [ref: > loja.id]
+}
+
+Table tipo_produto {
+  id integer [pk]
+  descricao varchar
+  id_loja integer [ref: > loja.id]
+}
+
+Table carrinho {
+  id integer [pk]
+  id_cliente integer [ref: > cliente.id]
+  valor_total decimal
+}
+
+Table carrinho_produto {
+  id integer [pk]
+  id_carrinho integer [ref: > carrinho.id]
+  id_produto integer [ref: > produto.id]
+  quantidade integer
+}
+
+Table pagamento {
+  id integer [pk]
+  forma_pagamento varchar
+  id_loja integer [ref: > loja.id]
+  id_nota integer
+  id_cliente integer [ref: > cliente.id]
+}
+
+Table nota_fiscal {
+  id integer [pk]
+  id_pagamento integer [ref: > pagamento.id]
+  id_loja integer [ref: > loja.id]
+  id_entregador integer [ref: > entregador.id]
+  id_cliente integer [ref: > cliente.id]
+  id_carrinho integer [ref: > carrinho.id]
+}
+
+Table historico {
+  id integer [pk]
+  id_carrinho integer [ref: > carrinho.id]
+  data timestamp
+}
+
+Table avaliacao {
+  id integer [pk]
+  nota integer
+  id_loja integer [ref: > loja.id]
+  id_entregador integer [ref: > entregador.id]
+  id_produto integer [ref: > produto.id]
+}
+
+Table favoritos {
+  id integer [pk]
+  id_cliente integer [ref: > cliente.id]
+  id_produto integer [ref: > produto.id]
+}
+
+Table chat {
+  id integer [pk]
+  id_loja integer [ref: > loja.id]
+  id_entregador integer [ref: > entregador.id]
+  id_cliente integer [ref: > cliente.id]
+}
+
+Table ajuda {
+  id integer [pk]
+  id_cliente integer [ref: > cliente.id]
+  id_loja integer [ref: > loja.id]
+}
