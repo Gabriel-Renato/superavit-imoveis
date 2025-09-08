@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superavit Imóveis</title>
+    <meta name="description" content="Superavit Imóveis - Encontre o imóvel dos seus sonhos em Brasília. Apartamentos, casas, chácaras e muito mais. Financiamento facilitado e atendimento especializado.">
+    <meta name="keywords" content="imóveis, apartamentos, casas, venda, Brasília, DF, financiamento, imobiliária">
+    <meta name="author" content="Superavit Imóveis">
+    <meta property="og:title" content="Superavit Imóveis - Seu imóvel dos sonhos em Brasília">
+    <meta property="og:description" content="Encontre apartamentos, casas, chácaras e muito mais com a Superavit Imóveis. Atendimento especializado e financiamento facilitado.">
+    <meta property="og:type" content="website">
+    <title>Superavit Imóveis - Seu imóvel dos sonhos em Brasília</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Cabeçalho -->
     <header>
-        <div class="box">
-            <img src="logo.png" alt="Logo Superavit" class="logo">
-            <nav class="navegacao">
-                <a href="#home">Home</a>
-                <a href="#imoveis">Imóveis à Venda</a>
-                <a href="contatos.html">Fale Conosco</a>
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo Superavit Imóveis" class="logo">
+            </div>
+            <nav class="navegacao" id="navegacao">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#imoveis" class="nav-link">Imóveis</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#contato" class="nav-link">Contato</a>
             </nav>
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -26,121 +43,507 @@
 
         <!-- Seção Hero -->
         <section class="hero">
-            <img src="bsb.png" alt="Imagem de Brasília" class="hero-image">
-            <h1>Superavit Imóveis</h1>
-            <p>Encontre o imóvel dos seus sonhos com a Superavit Imóveis.</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Encontre o Imóvel dos Seus Sonhos</h1>
+                    <p class="hero-subtitle">Com mais de 10 anos de experiência no mercado imobiliário de Brasília, oferecemos as melhores opções de apartamentos, casas e chácaras para você e sua família.</p>
+                    <div class="hero-buttons">
+                        <a href="#imoveis" class="btn btn-primary">Ver Imóveis</a>
+                        <a href="#contato" class="btn btn-secondary">Fale Conosco</a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <img src="bsb.png" alt="Brasília - Capital Federal" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="sobre">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sobre a Superavit Imóveis</h2>
+                    <p>Conheça nossa história e compromisso com a excelência</p>
+                </div>
+                <div class="sobre-content">
+                    <div class="sobre-text">
+                        <h3>Nossa Missão</h3>
+                        <p>Facilitar a realização do sonho da casa própria, oferecendo soluções imobiliárias completas e personalizadas para cada cliente.</p>
+                        
+                        <h3>Nossa Experiência</h3>
+                        <p>Com mais de uma década no mercado, já ajudamos centenas de famílias a encontrar o lar ideal em Brasília e região metropolitana.</p>
+                        
+                        <h3>Nossos Valores</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Transparência em todas as negociações</li>
+                            <li><i class="fas fa-check"></i> Atendimento personalizado e humanizado</li>
+                            <li><i class="fas fa-check"></i> Compromisso com a satisfação do cliente</li>
+                            <li><i class="fas fa-check"></i> Conhecimento profundo do mercado local</li>
+                        </ul>
+                    </div>
+                    <div class="sobre-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Imóveis Vendidos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Clientes Satisfeitos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Serviços -->
+        <section id="servicos" class="servicos">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nossos Serviços</h2>
+                    <p>Oferecemos soluções completas para suas necessidades imobiliárias</p>
+                </div>
+                <div class="servicos-grid">
+                    <div class="servico-card">
+                        <div class="servico-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Venda de Imóveis</h3>
+                        <p>Apartamentos, casas, chácaras e terrenos com as melhores condições de pagamento.</p>
+                    </div>
+                    <div class="servico-card">
+                        <div class="servico-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3>Locação</h3>
+                        <p>Encontre o imóvel ideal para alugar com contrato seguro e transparente.</p>
+                    </div>
+                    <div class="servico-card">
+                        <div class="servico-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Financiamento</h3>
+                        <p>Facilitamos o processo de financiamento com os melhores parceiros bancários.</p>
+                    </div>
+                    <div class="servico-card">
+                        <div class="servico-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Avaliação</h3>
+                        <p>Avaliação profissional e precisa do seu imóvel para venda ou locação.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Seção Imóveis -->
         <section id="imoveis" class="imoveis">
-            <h2>Imóveis à Venda</h2>
-            <div class="imoveis-container">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Imóveis em Destaque</h2>
+                    <p>Conheça nossa seleção especial de imóveis cuidadosamente escolhidos para você</p>
+                </div>
+                <div class="imoveis-container">
 
                 <!-- Imóvel 1 -->
                 <div class="imovel-card">
-                    <img src="apartamento-centro.jpeg" alt="Imagem do Imóvel 1" class="imovel-image">
-                    <h3>Apartamento no Centro</h3>
-                    <p>R$ 500.000</p>
-                    <p>3 quartos, 2 banheiros, 1 vaga de garagem</p>
+                    <div class="imovel-image-container">
+                        <img src="apartamento-centro.jpeg" alt="Apartamento no Centro de Brasília" class="imovel-image">
+                        <div class="imovel-badge">Destaque</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Apartamento no Centro</h3>
+                        <div class="imovel-price">R$ 500.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 3 quartos</span>
+                            <span><i class="fas fa-bath"></i> 2 banheiros</span>
+                            <span><i class="fas fa-car"></i> 1 vaga</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Imóvel 2 -->
                 <div class="imovel-card">
-                    <img src="casa-piscina.jpeg" alt="Imagem do Imóvel 2" class="imovel-image">
-                    <h3>Casa com Piscina</h3>
-                    <p>R$ 850.000</p>
-                    <p>4 quartos, 3 banheiros, 2 vagas de garagem</p>
+                    <div class="imovel-image-container">
+                        <img src="casa-piscina.jpeg" alt="Casa com Piscina em Brasília" class="imovel-image">
+                        <div class="imovel-badge">Novo</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Casa com Piscina</h3>
+                        <div class="imovel-price">R$ 850.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 4 quartos</span>
+                            <span><i class="fas fa-bath"></i> 3 banheiros</span>
+                            <span><i class="fas fa-car"></i> 2 vagas</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Imóvel 3 -->
                 <div class="imovel-card">
-                    <img src="chacara.jpeg" alt="Imagem do Imóvel 3" class="imovel-image">
-                    <h3>Chácara em Área Rural</h3>
-                    <p>R$ 1.200.000</p>
-                    <p>5 quartos, 4 banheiros, amplo terreno</p>
+                    <div class="imovel-image-container">
+                        <img src="chacara.jpeg" alt="Chácara em Área Rural" class="imovel-image">
+                        <div class="imovel-badge">Luxo</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Chácara em Área Rural</h3>
+                        <div class="imovel-price">R$ 1.200.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 5 quartos</span>
+                            <span><i class="fas fa-bath"></i> 4 banheiros</span>
+                            <span><i class="fas fa-tree"></i> Amplo terreno</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Imóvel 4 -->
                 <div class="imovel-card">
-                    <img src="apartamento-luxo.jpeg" alt="Imagem do Imóvel 4" class="imovel-image">
-                    <h3>Apartamento de Luxo</h3>
-                    <p>R$ 2.000.000</p>
-                    <p>4 quartos, 3 banheiros, 2 vagas de garagem</p>
+                    <div class="imovel-image-container">
+                        <img src="apartamento-luxo.jpeg" alt="Apartamento de Luxo em Brasília" class="imovel-image">
+                        <div class="imovel-badge">Premium</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Apartamento de Luxo</h3>
+                        <div class="imovel-price">R$ 2.000.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 4 quartos</span>
+                            <span><i class="fas fa-bath"></i> 3 banheiros</span>
+                            <span><i class="fas fa-car"></i> 2 vagas</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Imóvel 5 -->
                 <div class="imovel-card">
-                    <img src="casa-campo.jpeg" alt="Imagem do Imóvel 5" class="imovel-image">
-                    <h3>Casa de Campo</h3>
-                    <p>R$ 750.000</p>
-                    <p>3 quartos, 2 banheiros, amplo jardim</p>
+                    <div class="imovel-image-container">
+                        <img src="casa-campo.jpeg" alt="Casa de Campo" class="imovel-image">
+                        <div class="imovel-badge">Rural</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Casa de Campo</h3>
+                        <div class="imovel-price">R$ 750.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 3 quartos</span>
+                            <span><i class="fas fa-bath"></i> 2 banheiros</span>
+                            <span><i class="fas fa-seedling"></i> Amplo jardim</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Imóvel 6 -->
                 <div class="imovel-card">
-                    <img src="studio.jpeg" alt="Imagem do Imóvel 6" class="imovel-image">
-                    <h3>Studio Moderno</h3>
-                    <p>R$ 300.000</p>
-                    <p>1 quarto, 1 banheiro, sem garagem</p>
+                    <div class="imovel-image-container">
+                        <img src="studio.jpeg" alt="Studio Moderno" class="imovel-image">
+                        <div class="imovel-badge">Econômico</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Studio Moderno</h3>
+                        <div class="imovel-price">R$ 300.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 1 quarto</span>
+                            <span><i class="fas fa-bath"></i> 1 banheiro</span>
+                            <span><i class="fas fa-times"></i> Sem garagem</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Imóvel 7 -->
                 <div class="imovel-card">
-                    <img src="sobrado.jpeg" alt="Imagem do Imóvel 7" class="imovel-image">
-                    <h3>Sobrado Familiar</h3>
-                    <p>R$ 600.000</p>
-                    <p>3 quartos, 3 banheiros, 2 vagas de garagem</p>
+                    <div class="imovel-image-container">
+                        <img src="sobrado.jpeg" alt="Sobrado Familiar" class="imovel-image">
+                        <div class="imovel-badge">Familiar</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Sobrado Familiar</h3>
+                        <div class="imovel-price">R$ 600.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 3 quartos</span>
+                            <span><i class="fas fa-bath"></i> 3 banheiros</span>
+                            <span><i class="fas fa-car"></i> 2 vagas</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Imóvel 8 -->
                 <div class="imovel-card">
-                    <img src="cobertura.jpeg" alt="Imagem do Imóvel 8" class="imovel-image">
-                    <h3>Cobertura com Vista</h3>
-                    <p>R$ 1.800.000</p>
-                    <p>3 quartos, 2 banheiros, 2 vagas de garagem</p>
+                    <div class="imovel-image-container">
+                        <img src="cobertura.jpeg" alt="Cobertura com Vista Panorâmica" class="imovel-image">
+                        <div class="imovel-badge">Vista</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Cobertura com Vista</h3>
+                        <div class="imovel-price">R$ 1.800.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 3 quartos</span>
+                            <span><i class="fas fa-bath"></i> 2 banheiros</span>
+                            <span><i class="fas fa-car"></i> 2 vagas</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Imóvel 9 -->
                 <div class="imovel-card">
-                    <img src="kitnet.jpeg" alt="Imagem do Imóvel 9" class="imovel-image">
-                    <h3>Kitnet Econômica</h3>
-                    <p>R$ 150.000</p>
-                    <p>1 quarto, 1 banheiro, sem garagem</p>
+                    <div class="imovel-image-container">
+                        <img src="kitnet.jpeg" alt="Kitnet Econômica" class="imovel-image">
+                        <div class="imovel-badge">Oferta</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Kitnet Econômica</h3>
+                        <div class="imovel-price">R$ 150.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 1 quarto</span>
+                            <span><i class="fas fa-bath"></i> 1 banheiro</span>
+                            <span><i class="fas fa-times"></i> Sem garagem</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Imóvel 10 -->
                 <div class="imovel-card">
-                    <img src="casa-lago.jpeg" alt="Imagem do Imóvel 10" class="imovel-image">
-                    <h3>Casa na Beira do lago</h3>
-                    <p>R$ 1.500.000</p>
-                    <p>4 quartos, 3 banheiros, vista para o mar</p>
+                    <div class="imovel-image-container">
+                        <img src="casa-lago.jpeg" alt="Casa na Beira do Lago" class="imovel-image">
+                        <div class="imovel-badge">Exclusivo</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Casa na Beira do Lago</h3>
+                        <div class="imovel-price">R$ 1.500.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 4 quartos</span>
+                            <span><i class="fas fa-bath"></i> 3 banheiros</span>
+                            <span><i class="fas fa-water"></i> Vista para o lago</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Imóvel 11 -->
                 <div class="imovel-card">
-                    <img src="loft.jpeg" alt="Imagem do Imóvel 11" class="imovel-image">
-                    <h3>Loft Industrial</h3>
-                    <p>R$ 450.000</p>
-                    <p>1 quarto, 1 banheiro, conceito aberto</p>
+                    <div class="imovel-image-container">
+                        <img src="loft.jpeg" alt="Loft Industrial Moderno" class="imovel-image">
+                        <div class="imovel-badge">Moderno</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Loft Industrial</h3>
+                        <div class="imovel-price">R$ 450.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 1 quarto</span>
+                            <span><i class="fas fa-bath"></i> 1 banheiro</span>
+                            <span><i class="fas fa-expand"></i> Conceito aberto</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Imóvel 12 -->
                 <div class="imovel-card">
-                    <img src="casa-moderna.jpeg" alt="Imagem do Imóvel 12" class="imovel-image">
-                    <h3>Casa Moderna</h3>
-                    <p>R$ 1.100.000</p>
-                    <p>3 quartos, 2 banheiros, piscina</p>
+                    <div class="imovel-image-container">
+                        <img src="casa-moderna.jpeg" alt="Casa Moderna com Piscina" class="imovel-image">
+                        <div class="imovel-badge">Piscina</div>
+                    </div>
+                    <div class="imovel-content">
+                        <h3>Casa Moderna</h3>
+                        <div class="imovel-price">R$ 1.100.000</div>
+                        <div class="imovel-details">
+                            <span><i class="fas fa-bed"></i> 3 quartos</span>
+                            <span><i class="fas fa-bath"></i> 2 banheiros</span>
+                            <span><i class="fas fa-swimming-pool"></i> Piscina</span>
+                        </div>
+                        <div class="imovel-actions">
+                            <button class="btn btn-outline">Ver Detalhes</button>
+                            <button class="btn btn-primary">Agendar Visita</button>
+                        </div>
+                    </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- Seção Depoimentos -->
+        <section class="depoimentos">
+            <div class="container">
+                <div class="section-header">
+                    <h2>O que nossos clientes dizem</h2>
+                    <p>Depoimentos reais de quem confiou na Superavit Imóveis</p>
+                </div>
+                <div class="depoimentos-grid">
+                    <div class="depoimento-card">
+                        <div class="depoimento-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Excelente atendimento! A equipe da Superavit nos ajudou a encontrar o apartamento perfeito. Profissionais competentes e muito atenciosos."</p>
+                        </div>
+                        <div class="depoimento-author">
+                            <div class="author-info">
+                                <h4>Maria Silva</h4>
+                                <span>Compradora de Apartamento</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="depoimento-card">
+                        <div class="depoimento-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Processo de financiamento muito facilitado. Conseguiram as melhores condições para mim. Recomendo de olhos fechados!"</p>
+                        </div>
+                        <div class="depoimento-author">
+                            <div class="author-info">
+                                <h4>João Santos</h4>
+                                <span>Comprador de Casa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="depoimento-card">
+                        <div class="depoimento-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Transparência total nas negociações. Vendi meu imóvel rapidamente e com preço justo. Equipe muito profissional."</p>
+                        </div>
+                        <div class="depoimento-author">
+                            <div class="author-info">
+                                <h4>Ana Costa</h4>
+                                <span>Vendedora de Imóvel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Rodapé -->
     <footer id="contato">
-        <p>&copy; 2025 Superavit Imóveis. Todos os direitos reservados.</p>
-        <p><a href="contatos.html">Entre em contato</a></p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Logo Superavit Imóveis" class="footer-logo-img">
+                    </div>
+                    <p>Encontre o imóvel dos seus sonhos com a Superavit Imóveis. Mais de 10 anos de experiência no mercado imobiliário de Brasília.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#imoveis">Imóveis</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#">Venda de Imóveis</a></li>
+                        <li><a href="#">Locação</a></li>
+                        <li><a href="#">Financiamento</a></li>
+                        <li><a href="#">Avaliação</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> (61) 99999-9999</p>
+                        <p><i class="fas fa-envelope"></i> contato@superavitimoveis.com.br</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Brasília - DF</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Superavit Imóveis. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Menu mobile toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navegacao = document.getElementById('navegacao');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navegacao.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

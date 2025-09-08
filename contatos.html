@@ -3,41 +3,250 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contatos</title>
+    <meta name="description" content="Entre em contato com a Superavit Imóveis. Atendimento especializado para venda, locação e financiamento de imóveis em Brasília.">
+    <meta name="keywords" content="contato, imobiliária, Brasília, venda, locação, financiamento">
+    <title>Contato - Superavit Imóveis</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
     <header>
-      <div class="box">
-        <img src="logo.png" alt="Logo Superavit" class="logo" />
-        <nav class="navegacao">
-          <a href="index.html">Home</a>
-          <a href="contatos.html">Fale Conosco</a>
+      <div class="container">
+        <div class="logo-container">
+          <img src="logo.png" alt="Logo Superavit Imóveis" class="logo" />
+        </div>
+        <nav class="navegacao" id="navegacao">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html#sobre" class="nav-link">Sobre</a>
+          <a href="index.html#imoveis" class="nav-link">Imóveis</a>
+          <a href="index.html#servicos" class="nav-link">Serviços</a>
+          <a href="#contato" class="nav-link">Contato</a>
         </nav>
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
-    <section class="formulario">
-      <div class="interface">
-        <h2>Fale Conosco</h2>
-        <p>
-          Preencha o formulário abaixo e entraremos em contato com você o mais
-          breve possível.
-        </p>
-        <form action="">
-          <input type="text" name="nome" placeholder="Seu Nome" required />
-          <input type="email" name="email" placeholder="Seu E-mail" required />
-          <input type="tel" name="telefone" placeholder="Seu Telefone" />
-          <textarea
-            name="mensagem"
-            placeholder="Sua Mensagem"
-            required
-          ></textarea>
-          <div class="btn-enviar">
-            <input type="submit" value="Enviar" />
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1>Entre em Contato</h1>
+              <p class="hero-subtitle">
+                Estamos aqui para ajudar você a encontrar o imóvel ideal. 
+                Entre em contato conosco e receba um atendimento personalizado.
+              </p>
+            </div>
           </div>
-        </form>
+        </div>
+      </section>
+
+      <!-- Formulário de Contato -->
+      <section id="contato" class="formulario-section">
+        <div class="container">
+          <div class="formulario-container">
+            <div class="formulario-info">
+              <h2>Fale Conosco</h2>
+              <p>
+                Preencha o formulário abaixo e entraremos em contato com você o mais
+                breve possível. Nossa equipe está pronta para atendê-lo.
+              </p>
+              
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h3>Telefone</h3>
+                    <p>(61) 99999-9999</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h3>E-mail</h3>
+                    <p>contato@superavitimoveis.com.br</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h3>Endereço</h3>
+                    <p>Brasília - DF</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h3>Horário de Atendimento</h3>
+                    <p>Seg - Sex: 8h às 18h<br>Sáb: 8h às 12h</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="formulario-wrapper">
+              <form class="formulario" id="contactForm">
+                <div class="form-group">
+                  <label for="nome">Nome Completo *</label>
+                  <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">E-mail *</label>
+                  <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+                </div>
+                
+                <div class="form-group">
+                  <label for="telefone">Telefone</label>
+                  <input type="tel" id="telefone" name="telefone" placeholder="(61) 99999-9999" />
+                </div>
+                
+                <div class="form-group">
+                  <label for="assunto">Assunto</label>
+                  <select id="assunto" name="assunto">
+                    <option value="">Selecione um assunto</option>
+                    <option value="venda">Venda de Imóvel</option>
+                    <option value="locacao">Locação</option>
+                    <option value="financiamento">Financiamento</option>
+                    <option value="avaliacao">Avaliação</option>
+                    <option value="outros">Outros</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="mensagem">Mensagem *</label>
+                  <textarea id="mensagem" name="mensagem" placeholder="Conte-nos como podemos ajudar você..." required></textarea>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="aceito" name="aceito" required />
+                  <label for="aceito">Aceito receber comunicações da Superavit Imóveis</label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                  <i class="fas fa-paper-plane"></i>
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <img src="logo.png" alt="Logo Superavit Imóveis" class="footer-logo-img">
+            </div>
+            <p>Encontre o imóvel dos seus sonhos com a Superavit Imóveis. Mais de 10 anos de experiência no mercado imobiliário de Brasília.</p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Links Rápidos</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#sobre">Sobre</a></li>
+              <li><a href="index.html#imoveis">Imóveis</a></li>
+              <li><a href="index.html#servicos">Serviços</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Serviços</h3>
+            <ul>
+              <li><a href="#">Venda de Imóveis</a></li>
+              <li><a href="#">Locação</a></li>
+              <li><a href="#">Financiamento</a></li>
+              <li><a href="#">Avaliação</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contato</h3>
+            <div class="contact-info">
+              <p><i class="fas fa-phone"></i> (61) 99999-9999</p>
+              <p><i class="fas fa-envelope"></i> contato@superavitimoveis.com.br</p>
+              <p><i class="fas fa-map-marker-alt"></i> Brasília - DF</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Superavit Imóveis. Todos os direitos reservados.</p>
+        </div>
       </div>
-    </section>
+    </footer>
+
+    <script>
+      // Menu mobile toggle
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const navegacao = document.getElementById('navegacao');
+      
+      mobileMenuToggle.addEventListener('click', () => {
+        navegacao.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+      });
+
+      // Validação do formulário
+      const contactForm = document.getElementById('contactForm');
+      
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Validação básica
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const mensagem = document.getElementById('mensagem').value.trim();
+        const aceito = document.getElementById('aceito').checked;
+        
+        if (!nome || !email || !mensagem || !aceito) {
+          alert('Por favor, preencha todos os campos obrigatórios e aceite os termos.');
+          return;
+        }
+        
+        // Validação de email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert('Por favor, insira um e-mail válido.');
+          return;
+        }
+        
+        // Simulação de envio
+        alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        contactForm.reset();
+      });
+
+      // Máscara para telefone
+      const telefoneInput = document.getElementById('telefone');
+      telefoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+        e.target.value = value;
+      });
+    </script>
   </body>
 </html>
