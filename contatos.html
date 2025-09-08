@@ -211,6 +211,22 @@
         mobileMenuToggle.classList.toggle('active');
       });
 
+      // Fechar menu mobile ao clicar em um link
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          navegacao.classList.remove('active');
+          mobileMenuToggle.classList.remove('active');
+        });
+      });
+
+      // Fechar menu mobile ao clicar fora dele
+      document.addEventListener('click', (e) => {
+        if (!navegacao.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+          navegacao.classList.remove('active');
+          mobileMenuToggle.classList.remove('active');
+        }
+      });
+
       // Validação do formulário
       const contactForm = document.getElementById('contactForm');
       
